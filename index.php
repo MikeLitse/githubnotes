@@ -68,5 +68,13 @@
     foreach($cities as $key => $value){
         echo "{$key} {$value} <br>";
     }
+
+    //creates an array based on the key
+    $keys= array_keys($cities);
+
+    foreach($keys as $key){
+        echo "{$key} {$value} <br>";
+    }
+    
     
 ?>
