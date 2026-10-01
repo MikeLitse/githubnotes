@@ -55,10 +55,12 @@
     "Xanthi"=>"Xanthis",
     );
 
+    //for each method to print every value in the array based on the key
     foreach($cities as $key => $value){
         echo "{$key} {$value} <br>";
     }
 
+    //changed array value based on the key
     $cities["Thessaloniki"]= "Sindos"; //uses key to change a value
     echo "{$cities["Thessaloniki"]} <br>";
 
