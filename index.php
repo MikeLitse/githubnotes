@@ -55,11 +55,18 @@
     "Xanthi"=>"Xanthis",
     );
 
-    echo "{$cities["Thessaloniki"]} <br>";
-
     foreach($cities as $key => $value){
         echo "{$key} {$value} <br>";
     }
 
+    $cities["Thessaloniki"]= "Sindos"; //uses key to change a value
+    echo "{$cities["Thessaloniki"]} <br>";
+
+    array_pop($cities); //removes last element
+    array_shift($cities); //removes first element
+
+    foreach($cities as $key => $value){
+        echo "{$key} {$value} <br>";
+    }
     
 ?>
