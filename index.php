@@ -26,14 +26,13 @@
     array_shift($foods); //removes the first element
     $foods= array_reverse($foods); //reverses and returns the array
 
-
+    //foreach loop
     foreach($foods as $food){
         echo "$foods[$i] <br>";
         $i++;
     }
     
     //while loop
-    
     while ($i<count($foods)) {
         echo $foods[$i];
         $i++;
@@ -41,12 +40,26 @@
     
 
     //for loop and post method
-     
     $counter = $_POST["counter"];
     
     while ($counter > 0) {
         echo" $counter <br>";
         $counter--;
     }
+
+    //associative array -> Array with value paired with key
+
+    $cities = array("Thessaloniki"=>"Thessalonikis",
+    "Athina"=>"Attikhs",
+    "Serres"=>"Serrwn",
+    "Xanthi"=>"Xanthis",
+    );
+
+    echo "{$cities["Thessaloniki"]} <br>";
+
+    foreach($cities as $key => $value){
+        echo "{$key} {$value} <br>";
+    }
+
     
 ?>
