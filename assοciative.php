@@ -68,6 +68,14 @@
     "Xanthi"=>"Xanthis",
     );
 
+    //add an element to the array
+    $cities["Bolos"]= "Magnhsias";
+
+    //removes first element
+    //array_shift($cities);
+    //removes last element
+    //array_pop($cities);
+
     //flips keys with values values
     $flipped=array_flip($cities);
 
@@ -84,5 +92,33 @@
     
     $city= $cities[$_POST["province"]];
 
-    echo "The city of the province is : ${city}";
+    echo "The city of the province is : ${city} <br>";
+
+    //isset() Returns true if variable is declared 
+    //or false if its null
+
+
+    $user= null;
+    if(isset($user)){
+        echo "Its set <br>";
+    }   
+    else{
+        echo "Its not set <br>";
+    }
+
+    //empty() returns true if variable is not declared
+    //returns false if its declared
+    $user= "User";
+
+    if(empty($user)){
+        echo "Its empty <br>";
+    }   
+    else{
+        echo "Its not empty <br>";
+    }
+
+    if(isset($_POST["province"])){
+        echo "Hello {$_POST["province"]}";
+    }
+    
 ?>

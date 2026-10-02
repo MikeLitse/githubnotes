@@ -9,7 +9,9 @@
     <form method="POST">
         <input type="text" name="counter">
         <input type="submit" value="Loop it">
+        <!-- This is how you get to another .php file-->
         <a href="assοciative.php">Associative page</a>
+        <a href="functions.php">Functions page</a>
     </form>
    
 </body>
