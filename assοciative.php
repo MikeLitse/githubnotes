@@ -11,6 +11,8 @@
 </html>
 
 <?php 
+
+    
      //associative array -> Array with value paired with key
 
     $cities = array("Thessaloniki"=>"Thessalonikis",
@@ -31,14 +33,35 @@
     array_pop($cities); //removes last element
     array_shift($cities); //removes first element
 
+    //print the values that matches with the keys
     foreach($cities as $key => $value){
         echo "{$key} {$value} <br>";
     }
 
     //creates an array based on the key
     $keys= array_keys($cities);
+    //create an array based on the balues
+    $values= array_values($cities);
 
     foreach($keys as $key){
         echo "{$key} {$value} <br>";
     }
+    
+
+    $cities = array("Thessaloniki"=>"Thessalonikis",
+    "Athina"=>"Attikhs",
+    "Serres"=>"Serrwn",
+    "Xanthi"=>"Xanthis",
+    );
+
+     //flip keys and values
+    $flipped=array_flip($cities);
+
+    echo"flipped <br>";
+
+    foreach($flipped as $city){
+        echo " ${city} <br>";
+    }
+
+    
 ?>
