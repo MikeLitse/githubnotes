@@ -6,6 +6,20 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- action to point to the file the code will be executed
+     and method is used to point the method being used
+    -->
+    <form action="assοciative.php" method="post">
+        <label> enter a city </label>
+        <!-- name is used to know from which
+        element to get the value from-->
+        <input type="text" name="province">
+        <input type="submit">
+        <div>
+            <h>------</h>
+        </div>
+        
+    </form>
     
 </body>
 </html>
@@ -13,7 +27,7 @@
 <?php 
 
     
-     //associative array -> Array with value paired with key
+    //associative array -> Array with value paired with key
 
     $cities = array("Thessaloniki"=>"Thessalonikis",
     "Athina"=>"Attikhs",
@@ -54,14 +68,21 @@
     "Xanthi"=>"Xanthis",
     );
 
-     //flip keys and values
+    //flips keys with values values
     $flipped=array_flip($cities);
 
     echo"flipped <br>";
 
-    foreach($flipped as $city){
-        echo " ${city} <br>";
+    foreach($flipped as $key => $value){
+        echo "key: ${key} = value : ${value} <br>";
     }
 
+    //flipped to normal
+    $flipped=array_flip($flipped);
+
+    //Access an element from the array
     
+    $city= $cities[$_POST["province"]];
+
+    echo "The city of the province is : ${city}";
 ?>
