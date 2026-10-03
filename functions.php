@@ -46,11 +46,45 @@
     echo "Your name is ${user} shuffled <br>";
 
     $user="Michail Litseselidis";
-    //checks if parameters are equal (true->returns 0, false->1 or -1)
+    //checks if parameters are equal (true->returns 0, false-> 1)
     $equals= strcmp($user,"Michail");
-    echo "Are the strings equal: ${equals}";
+    echo "Are the strings equal: ${equals}<br>";
 
+    $phone="231-052-1010";
+    //counts chars 
+    $count= strlen($phone);
+    echo "The count of your string is ${count}<br>";
 
+    $phone="231-052-1010";
+    //finds the position of the second parameter inside the first
+    $index=strpos($phone,"-");
+    echo "Your char position is ${index}<br>";
+
+    $user="Michail Litseselidis";
+    //creates a new string from a parameter, second parameter
+    //is the beginning of the new string
+    //third parameter is the end of the string (can be unspecified)
+    $firstname= substr($user,0, 7);
+    $lastname= substr($user,8);
+    echo "Your first name is ${firstname} and your last name is ${lastname}<br>";
+
+    $user="Michail Litseselidis Eleyftherios";
+    //seperates a string to pieces
+    //in positions given by the parameter
+    //this returns an array of strings
+    $usersarr=explode(" ", $user);
+
+    echo "Your exploded(seperated) string is<br>";
+    foreach($usersarr as $u){
+        echo "${u}<br>";
+    }
+
+    $userarr=array("Michail","Litseselidis","Eleyftherios");
+    $user="";
+    //adds the elements of an array to a string
+    //first parameter is the seperator used to make the string
+    $user=implode("#", $userarr);
+    echo "Your imploded string is ${user}";
 ?>
 
 <!DOCTYPE html>
