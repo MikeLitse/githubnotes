@@ -12,6 +12,7 @@
         <!-- This is how you get to another .php file-->
         <a href="assοciative.php">Associative page</a>
         <a href="functions.php">Functions page</a>
+        <a href="validations.php">Validation page</a>
     </form>
    
 </body>
